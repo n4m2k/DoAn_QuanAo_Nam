@@ -150,7 +150,10 @@ const Cart = ({ history }) => {
                                   >
                                     <span className="item-cart-price">
                                       <span className="price">
-                                        {item.price}
+                                        {new Intl.NumberFormat("vi-VN", {
+                                          style: "currency",
+                                          currency: "VND",
+                                        }).format(item.price)}
                                       </span>
                                     </span>
                                   </div>
@@ -196,7 +199,10 @@ const Cart = ({ history }) => {
                                   >
                                     <span className="item-cart-price">
                                       <span className="price">
-                                        {item.quantity * item.price}
+                                        {new Intl.NumberFormat("vi-VN", {
+                                          style: "currency",
+                                          currency: "VND",
+                                        }).format(item.price * item.quantity)}
                                       </span>
                                     </span>
                                   </div>
@@ -233,22 +239,34 @@ const Cart = ({ history }) => {
                             <tbody>
                               <tr>
                                 <td className="total-text">Tạm tính</td>
-                                <td className="total-price">{`${cartItems.reduce(
-                                  (acc, item) =>
-                                    acc + item.quantity * item.price,
-                                  0
-                                )}`}</td>
+                                <td className="total-price">
+                                  {new Intl.NumberFormat("vi-VN", {
+                                    style: "currency",
+                                    currency: "VND",
+                                  }).format(
+                                    cartItems.reduce(
+                                      (acc, item) =>
+                                        acc + item.quantity * item.price,
+                                      0
+                                    )
+                                  )}
+                                </td>
                               </tr>
                               <tr>
                                 <td className="total-text total-text-end">
                                   Tổng tiền thanh toán
                                 </td>
                                 <td className="total-price total-price-end">
-                                  {`${cartItems.reduce(
-                                    (acc, item) =>
-                                      acc + item.quantity * item.price,
-                                    0
-                                  )}`}
+                                  {new Intl.NumberFormat("vi-VN", {
+                                    style: "currency",
+                                    currency: "VND",
+                                  }).format(
+                                    cartItems.reduce(
+                                      (acc, item) =>
+                                        acc + item.quantity * item.price,
+                                      0
+                                    )
+                                  )}
                                 </td>
                               </tr>
                             </tbody>

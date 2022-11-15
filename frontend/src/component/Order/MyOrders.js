@@ -65,7 +65,10 @@ const MyOrders = () => {
         itemsQty: item.orderItems.length,
         id: item._id,
         status: item.orderStatus,
-        amount: item.totalPrice,
+        amount: new Intl.NumberFormat("vi-VN", {
+          style: "currency",
+          currency: "VND",
+        }).format(item.totalPrice),
       });
     });
   useEffect(() => {

@@ -155,7 +155,10 @@ const ProductDetails = ({ match }) => {
                     </div>
                     <div className="details-price">
                       <span className="details-product-price">
-                        {product.price}
+                        {new Intl.NumberFormat("vi-VN", {
+                          style: "currency",
+                          currency: "VND",
+                        }).format(product.price)}
                       </span>
                     </div>
                     <div className="detailsBlock-2">

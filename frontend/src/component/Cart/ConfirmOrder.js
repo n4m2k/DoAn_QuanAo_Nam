@@ -85,8 +85,18 @@ const ConfirmOrder = ({ history }) => {
                             {item.name}
                           </Link>{" "}
                           <span>
-                            {item.quantity} X {item.price} ={" "}
-                            <b>{item.price * item.quantity}</b>
+                            {item.quantity} X{" "}
+                            {new Intl.NumberFormat("vi-VN", {
+                              style: "currency",
+                              currency: "VND",
+                            }).format(item.price)}{" "}
+                            ={" "}
+                            <b>
+                              {new Intl.NumberFormat("vi-VN", {
+                                style: "currency",
+                                currency: "VND",
+                              }).format(item.price * item.quantity)}
+                            </b>
                           </span>
                         </div>
                       ))}
@@ -99,15 +109,33 @@ const ConfirmOrder = ({ history }) => {
                   <div>
                     <div>
                       <p>Tạm tính:</p>
-                      <span>{subtotal}</span>
+                      <span>
+                        {" "}
+                        {new Intl.NumberFormat("vi-VN", {
+                          style: "currency",
+                          currency: "VND",
+                        }).format(subtotal)}
+                      </span>
                     </div>
                     <div>
                       <p>Chi phí vận chuyển:</p>
-                      <span>{shippingCharges}</span>
+                      <span>
+                        {" "}
+                        {new Intl.NumberFormat("vi-VN", {
+                          style: "currency",
+                          currency: "VND",
+                        }).format(shippingCharges)}
+                      </span>
                     </div>
                     <div>
                       <p>Thuế:</p>
-                      <span>{tax}</span>
+                      <span>
+                        {" "}
+                        {new Intl.NumberFormat("vi-VN", {
+                          style: "currency",
+                          currency: "VND",
+                        }).format(tax)}
+                      </span>
                     </div>
                   </div>
 
@@ -115,7 +143,13 @@ const ConfirmOrder = ({ history }) => {
                     <p>
                       <b>Tổng tiền:</b>
                     </p>
-                    <span>{totalPrice}</span>
+                    <span>
+                      {" "}
+                      {new Intl.NumberFormat("vi-VN", {
+                        style: "currency",
+                        currency: "VND",
+                      }).format(totalPrice)}
+                    </span>
                   </div>
 
                   <button onClick={proceedPayment}>Tiến hành thanh toán</button>

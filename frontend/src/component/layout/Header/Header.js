@@ -6,6 +6,10 @@ import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
 import { useSelector } from "react-redux";
 const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
+  const total = cartItems.reduce(
+    (acc, item) => acc + item.quantity * item.price,
+    0
+  );
   return (
     <div className="header">
       <div className="header-2">
@@ -99,7 +103,10 @@ const Header = () => {
                             <div className="cart_item_info">
                               <h5 className="cart_text_pd">{item.name}</h5>
                               <span className="cart_pd_price">
-                                {item.price}
+                                {new Intl.NumberFormat("vi-VN", {
+                                  style: "currency",
+                                  currency: "VND",
+                                }).format(item.price)}
                               </span>
                               <span className="cart_pd_multiply">x</span>
                               <span className="cart_pd_qnt">
@@ -115,7 +122,12 @@ const Header = () => {
                       <div className="border_bt_cart" />
                       <div className="tong">
                         <span className="tong_gia">Tổng cộng :</span>
-                        <span> 380 VNĐ</span>
+                        <span>
+                          {new Intl.NumberFormat("vi-VN", {
+                            style: "currency",
+                            currency: "VND",
+                          }).format(total)}{" "}
+                        </span>
                       </div>
                       <div className="border_bt_cart" />
                       <button className="btn_cart_pd">Xem giỏ hàng</button>

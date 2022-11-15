@@ -85,7 +85,13 @@ const OrderDetails = ({ match }) => {
                       </div>
                       <div>
                         <p>Tổng tiền: </p>
-                        <span>{order.totalPrice && order.totalPrice}</span>
+
+                        <span>
+                          {new Intl.NumberFormat("vi-VN", {
+                            style: "currency",
+                            currency: "VND",
+                          }).format(order.totalPrice && order.totalPrice)}
+                        </span>
                       </div>
                     </div>
                     <Typography>Trạng thái</Typography>
@@ -114,8 +120,18 @@ const OrderDetails = ({ match }) => {
                               {item.name}
                             </Link>{" "}
                             <span>
-                              {item.quantity} X {item.price} ={" "}
-                              <b>{item.price * item.quantity}</b>
+                              {item.quantity} X{" "}
+                              {new Intl.NumberFormat("vi-VN", {
+                                style: "currency",
+                                currency: "VND",
+                              }).format(item.price)}{" "}
+                              ={" "}
+                              <b>
+                                {new Intl.NumberFormat("vi-VN", {
+                                  style: "currency",
+                                  currency: "VND",
+                                }).format(item.price * item.quantity)}
+                              </b>
                             </span>
                           </div>
                         ))}

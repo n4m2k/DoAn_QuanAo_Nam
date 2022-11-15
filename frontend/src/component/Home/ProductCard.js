@@ -12,7 +12,7 @@ const ProductCard = ({ product }) => {
     <Link to={`/product/${product._id}`} className="productCart">
       <div className="product-item">
         <div className="product-thumbail">
-          <div className="sale-top-right"> -20%</div>
+          {/* <div className="sale-top-right"> -20%</div> */}
           <div className="product-img">
             <div className="img-thumb">
               <img
@@ -35,7 +35,12 @@ const ProductCard = ({ product }) => {
           </div>
           <div className="product-item-price">
             <span className="special-price">
-              <span className="price product-price">{product.price}</span>
+              <span className="price product-price">
+                {new Intl.NumberFormat("vi-VN", {
+                  style: "currency",
+                  currency: "VND",
+                }).format(product.price)}
+              </span>
             </span>
           </div>
         </div>
