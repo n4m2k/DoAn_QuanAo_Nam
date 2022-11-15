@@ -1,0 +1,317 @@
+/* Header */
+.header{
+    background-color: #fff;
+    /* box-shadow: 0 -14px 71px -2px #00000078; */
+    /* position: fixed; */
+    /* top:0;
+    left: 0;
+    right: 0; */
+    z-index: 12;
+    transition: 0.2s ease;
+}
+.header .header-2{
+    background-color: rgb(143, 28, 28);
+    height: 40px;
+}
+.header .header-2 .topbar{
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.topbar .left-topbar span{
+    line-height: 40px;
+    color: 	#FFFFFF;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Roboto",sans-serif;
+}
+.topbar .left-topbar a{
+    line-height: 40px;
+    color: 	#FFFFFF;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Roboto",sans-serif;
+}
+.topbar .left-topbar a:hover{
+    opacity: 0.7;
+}
+.topbar .right-topbar .right-topbar-list{
+    display: flex;
+    line-height: 40px;
+}
+.right-topbar-list .right-topbar-item a{
+    color: 	#FFFFFF;
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 400;
+    font-family: "Roboto",sans-serif;
+    margin-right: 16px;
+    list-style-type: none;
+}
+.right-topbar-list .right-topbar-item a:hover{
+    opacity: 0.7;
+}
+.header-2 .header-logo{
+    width: 100%;
+    text-align: center;
+    position: relative;
+    border-bottom: solid 1px #ebebeb;
+}
+.header-2 .header-logo a {
+    text-decoration: none;
+    display: inline-block;
+}
+.header-2 .header-logo a img{
+    margin: 0 auto;
+    height: 50px;
+    margin: 35px 0;
+}
+.header-nav{
+    height: 70px;
+    display: flex;
+    width: 1200px;
+    max-width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    /* background-color: #ccc; */
+    
+}
+.header-nav .left-nav-bar .nav-list{
+    display: flex;
+}
+.left-nav-bar .nav-list li{
+    padding: 0 16px;
+    position: relative;
+}
+.left-nav-bar .nav-list li a{
+    line-height: 70px;
+    font-size: 14px;
+    font-family: 'Merriweather' !important;
+    font-weight: 700;
+    color: #333;
+}
+.left-nav-bar .nav-list li .ic-down{
+    line-height: 70px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #333;
+}
+.left-nav-bar .nav-list>li>a:hover{
+    color: #333;
+}
+.nav-list .subnav{
+    min-width: 160px;
+    display: none;
+    position: absolute;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    list-style: none;
+    top: 80%; 
+    left: 16; 
+    z-index: 999;
+    animation: slide-up 0.5s ease forwards;
+}
+.nav-list .subnav li{
+    border-bottom: 1px solid #ccc;
+    color: #fff;
+}
+.nav-list .subnav li:hover{
+    background-color: #ccc;
+}
+.nav-list .subnav li:hover a{
+    color: #fff;
+}
+.nav-list .subnav li:last-child{
+    border-bottom: none;
+}
+
+.nav-list .subnav>li>a{
+    line-height: 32px;
+    padding: 5px 15px 5px 10px;
+    color: #333;
+    font-weight: 500;
+}
+.nav-list li:hover .subnav {
+    display: block;
+}
+.right-nav-bar {
+    position: relative;
+    display: flex;
+}
+
+.header_cart{
+    width: 100px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    position: relative;
+    line-height: 88px;
+    
+    /* margin-right: 36px; */
+}
+.header_cart a{
+    color:#333;
+    
+    transition: all 0.5s;
+    
+}
+.header_cart a:hover {
+    color: #e84118
+}
+/* Hiện giỏ hàng */
+.header_cart:hover .header__cart_list{
+    display: block;
+}
+
+.header__cart_list{
+    position: absolute;
+    top: 100%;
+    right:-16px;
+    background-color: #fff ;
+    width: 300px;
+    box-shadow: 0 1px 30px 10px rgba(0, 0, 0, 0.2);
+    display: none;
+    cursor: pointer;
+    animation: slide-up 0.7s ease forwards;
+    z-index: 100;
+}
+.header__cart_list::after{
+    cursor: pointer;
+    content: "";
+    position: absolute;
+    right: 37px;
+    top: -26px;
+    border-width: 16px 20px;
+    border-style: solid;
+    border-color: transparent transparent #fff transparent;
+   
+}
+.header-cart-num{
+    margin-top: 20px;
+    margin-left: -10px;
+    position: absolute;
+    padding:2px 6px;
+    font-size: 10px;
+    line-height: 12px;
+    border-radius: 10px;
+    color: #fff;
+    background-color: #0089ff;
+
+}
+
+.header__cart_list>.text_cart{
+    padding: 12px;
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
+    font: 300 1.05vmax "Roboto";
+    
+}
+.cart_list_item{
+    padding-left: 0;
+    margin: 24px 0;
+}
+.cart_list_item1{
+    display:flex;
+    justify-content: space-between;
+}
+.header_cart_item1{
+    width: 40px;
+    height: 40px;
+    margin:12px;
+}
+.cart_item_info{
+    color: #353b48 ;
+}
+.cart_item_info:hover{
+    color: #000;
+}
+.cart_item_info1{
+    color: #bdc3c7;
+    margin-right: 10px;
+}
+.cart_item_info1:hover{
+ color: #000;
+}
+.btn_cart_pd{
+    width: 70%;
+    height:35px;
+    margin:12px 45px;
+    background-color: #e84118;
+    border: none;
+    font-weight: 600;
+    color: #fff;
+}
+.btn_cart_pd:hover{
+    background-color: #ec5f3c;
+}
+.text_cart{
+    display: none;
+    width: 100%;
+    color: rgb(143, 135, 135);
+    padding: 40px 10px;
+    
+}
+.right-nav-bar .size-1{
+    font-size: 25px;
+    line-height: 77px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: #333;
+}
+.right-nav-bar .size-1:hover{
+    color:#0089ff
+}
+.header_cart .size{
+    font-size: 29px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: #333;
+    
+}
+.border_bt_cart{
+    width: 90%;
+    margin: 0 auto;
+    border-top: 1px solid #f1f2f6;
+}
+.tong{
+    margin: 8px 0;
+    text-align: center;
+}
+.cart_item_info{
+    margin: 8px 0;
+}
+.line-bottom{
+    margin: 0 auto;
+    border-top: 3px solid red;
+    width: 3%;
+
+}
+.lgin-size{  
+    line-height: 88px;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.5s;
+    color: #333;
+}
+.lgin-size>svg{
+    font-size: 27px;
+}
+/* user options */
+.speedDial{
+    position: fixed;
+    right: 3vmax;
+    top: 3vmax;
+}
+.speedDialIcon{
+    width: 56px;
+    height: 56px;
+    border-radius: 100%;
+}

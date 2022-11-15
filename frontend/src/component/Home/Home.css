@@ -1,0 +1,211 @@
+.category-1{
+    margin: 0 auto 75px auto;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+}
+.category-1 .hero-content {
+    font-size: 32px;
+    font-weight: 350;
+    color: rgb(143, 28, 28);
+    text-align: center;
+    padding: 32px 0;
+}
+.product-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.category-1 .product-list .product-item{
+    padding: 0 15px;
+    margin: 24px 0;
+    position: relative;
+    height: 310px;
+}
+.product-item .product-thumbail .sale-top-right{
+    position: absolute;
+    width: 45px;
+    height: 45px;
+    right: 15px;
+    top: -16px;
+    z-index: 8;
+    background: #ed1c24;
+    color: #fff;
+    padding: 10px 4px;
+}
+.product-img .img-thumb .img-item{
+    height: 270px;
+    width: auto;
+    margin: 0 auto;
+}
+
+
+.product-info{
+    background: #fff;
+    padding: 0;
+    width: 100%;
+    float: left;
+    margin: 15px 0px 15px;
+}
+.product-info .product-name{
+    max-width: 270px;
+}
+.product-info .product-name .product-name-a{
+    font-family: 'Roboto',sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin:0.85vmax;
+    line-height: 24px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #333;
+    text-decoration: none;
+    text-transform: uppercase;
+    
+}
+.product-info .product-name .product-name-a:hover{
+    color:#0089ff;
+    
+}
+.product-item-price .special-price .price{
+    font-size: 16px;
+    font-family: 'Arial', sans-serif !important;
+    color: #363636;
+    font-weight: 700;
+    margin-right: 10px;
+}
+.product-action{
+    display: flex;
+    position: absolute;
+    top: calc(100% / 2 - 35px);
+    width: 100%;
+    float: left;
+    text-align: center;
+    height: 35px;
+}
+.product-action .btn-view,
+.product-action .btn-buy{
+    text-align: center;
+    height: 35px;
+    line-height: 35px;
+    font-family: "Roboto",sans-serif;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    display: none;
+    padding: 0 15px;
+    border: solid 1px #ed1c24;
+    width: 42%;
+    float: left;
+    background: #ed1c24;
+    margin: 0 2.5px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+.product-thumbail:hover .product-action a{
+    display: inline-block;
+    animation: slide-up 0.7s ease forwards;
+    
+}
+
+.product-action a:hover ~.img-thumb{
+    color: #fff;
+    opacity: 0.3;
+}
+.product-action a:hover {
+    background-color: #0089ff;
+    border: solid 1px #0089ff;
+    
+}
+.btn-custome{
+    display: flex;
+    justify-content: center;
+}
+.btn-custome .button-custome{
+    margin-top:40px;
+    height: 35px;
+    display: inline-block;
+    text-align: center;
+    line-height: 35px;
+    background: #ed1c24;
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 400;
+    border: solid 1px #ed1c24;
+    padding: 0 30px;
+    transition: all 0.5s;
+}
+.btn-custome .button-custome:hover{
+    background: #0089ff;
+    border: solid 1px #0089ff;
+    cursor: pointer;
+}
+.banner{
+    margin-top: 250px;
+    /* background-image: linear-gradient(to right, #635dc0, #3027ae); */
+    background-image: url('https://file.hstatic.net/1000351433/file/bn_chinh_0a2b804aaede4ac3baac9fbdd82c7230.jpg');
+    
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vmin;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+.banner >h1{
+    margin:5vmax;
+    font:600 2.5vmax "Roboto";
+}
+.banner > p{
+    font:300 1.4vmax "Lucida Sans"
+}
+.banner >a >button{
+    margin-bottom: 5vmax;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #fff;
+    border-radius: 0;
+    padding: 1vmax;
+    transition: all 0.5s;
+    width: 9vmax;
+    font:500 1vmax "Roboto";
+}
+
+.banner >a >button:hover{
+    background-color: rgba(255, 255, 255, 0);
+    color: white;
+}
+.banner::after{
+    content: "";
+    width: 100vw;
+    height: 139vmin;
+    background-color: #ffffff;
+    position: absolute;
+    top: 0%;
+    left: 0;
+    clip-path: polygon(100% 68%, 0 100%, 100% 100%);
+    max-width: 100%;
+}
+.product-info>div{
+    margin: 0.85vmax;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.product-info>div>.productInfoSpan{
+    margin: 0.5vmax;
+    font:300 0.8vmax "Roboto"
+}
+.productCart{
+    margin-top: 24px;
+}
+.productCart:hover{
+    box-shadow: 0 0 5px rgba(15,15,15,0.26);
+    transform: translateY(-1vmax);
+}

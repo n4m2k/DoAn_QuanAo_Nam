@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Peralta&display=swap%27');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Peralta&family=Poppins:wght@300;400;700&display=swap%27');
+*{
+    scroll-behavior: smooth;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"]{
+    -moz-appearance: textfield;
+}
+
+
+.greenColor{
+    color: green !important;
+}
+
+.redColor{
+    color: red !important;
+}
