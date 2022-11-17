@@ -35,10 +35,6 @@ const Dashboard = () => {
       totalAmount += item.totalPrice;
     });
 
-  let fmTotalAmout = new Intl.NumberFormat("vi-VN", {
-    style: "currency",
-    currency: "VND",
-  }).format(totalAmount);
   const lineState = {
     labels: ["Tiền ban đầu", "Tiền kiếm được"],
     datasets: [
@@ -46,7 +42,7 @@ const Dashboard = () => {
         label: "Doanh thu",
         backgroundColor: ["tomato"],
         hoverBackgroundColor: ["rgb(197, 72, 49)"],
-        data: [0, fmTotalAmout],
+        data: [0, totalAmount],
       },
     ],
   };

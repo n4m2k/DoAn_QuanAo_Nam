@@ -106,10 +106,11 @@ const Header = () => {
                                 {new Intl.NumberFormat("vi-VN", {
                                   style: "currency",
                                   currency: "VND",
-                                }).format(item.price)}
+                                }).format(item.price)}{" "}
                               </span>
                               <span className="cart_pd_multiply">x</span>
                               <span className="cart_pd_qnt">
+                                {" "}
                                 {item.quantity}
                               </span>
                             </div>

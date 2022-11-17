@@ -78,7 +78,7 @@ const Products = ({ match }) => {
               <div className="main-content">
                 <div className="slide-bar">
                   <div className="title-slidebar">
-                    <h2>Danh mục sản phẩm</h2>
+                    <h1>Danh mục sản phẩm</h1>
                   </div>
                   <div className="slide">
                     <ul className="slide-list">
@@ -108,25 +108,21 @@ const Products = ({ match }) => {
                       min={0}
                       max={1000000}
                     />
-                    <fieldset>
-                      <Typography
-                        component="legend"
-                        className="title-slidebar-2"
-                      >
-                        Lọc theo đánh giá
-                      </Typography>
-                      <Slider
-                        className="filter-rating"
-                        value={ratings}
-                        onChange={(e, newRating) => {
-                          setRatings(newRating);
-                        }}
-                        aria-labelledby="continuous-rating"
-                        min={0}
-                        max={5}
-                        valueLabelDisplay="auto"
-                      ></Slider>
-                    </fieldset>
+
+                    <Typography component="legend" className="title-slidebar-1">
+                      Lọc theo đánh giá
+                    </Typography>
+                    <Slider
+                      className="filter-rating"
+                      value={ratings}
+                      onChange={(e, newRating) => {
+                        setRatings(newRating);
+                      }}
+                      aria-labelledby="continuous-rating"
+                      min={0}
+                      max={5}
+                      valueLabelDisplay="auto"
+                    ></Slider>
                   </div>
                 </div>
                 <div className="category-product">

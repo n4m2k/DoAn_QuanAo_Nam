@@ -40,7 +40,10 @@ const Home = () => {
 
           <div className="banner">
             <p>#STEPOUT COLLECTION | HODIDAY SEASON</p>
-            <h1>HADES</h1>
+            <div className="home-title">
+              <h1 class="border">PHUONG NAM</h1>
+              <h1 class="wave">PHUONG NAM</h1>
+            </div>
             <a href="#container">
               <button>
                 Kéo xuống <CgMouse></CgMouse>

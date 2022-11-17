@@ -47,9 +47,9 @@
     width: 100%;
 }
 
-.slide-bar .title-slidebar h2{
+.slide-bar .title-slidebar h1{
     font-size: 16px;
-    font-family: "Merriweather",sans-serif;
+    
     font-weight: 600;
     color: #333;
     line-height: 24px;
