@@ -15,6 +15,7 @@ exports.registerUser = catchAsyncErrors(async (req, res, next) => {
     crop: "scale",
   });
   const { name, email, password } = req.body;
+
   const user = await User.create({
     name,
     email,
@@ -45,13 +46,13 @@ exports.loginUser = catchAsyncErrors(async (req, res, next) => {
   const user = await User.findOne({ email }).select("+password");
 
   if (!user) {
-    return next(new ErrorHander("Khồng tồn tài Email hoặc Mật khẩu", 401));
+    return next(new ErrorHander("Khồng tồn tài Email", 401));
   }
 
   const isPasswordMatched = await user.comparePassword(password);
 
   if (!isPasswordMatched) {
-    return next(new ErrorHander("Khồng tồn tài Email hoặc Mật khẩu", 401));
+    return next(new ErrorHander("Sai mật khẩu", 401));
   }
 
   sendToken(user, 200, res);

@@ -36,14 +36,24 @@ const LoginSignUp = ({ history, location }) => {
     e.preventDefault();
     dispatch(login(loginEmail, loginPassword));
   };
+  function ValidateEmail(mail) {
+    if (/^\w+([.-]?\w+)@\w+([.-]?\w+)(.\w{3})+$/.test(mail)) {
+      return true;
+    }
+    return false;
+  }
   const registerSubmit = (e) => {
     e.preventDefault();
     const myForm = new FormData();
-    myForm.set("name", name);
-    myForm.set("email", email);
-    myForm.set("password", password);
-    myForm.set("avatar", avatar);
-    dispatch(register(myForm));
+    if (ValidateEmail(email)) {
+      myForm.set("email", email);
+      myForm.set("name", name);
+      myForm.set("password", password);
+      myForm.set("avatar", avatar);
+      dispatch(register(myForm));
+    } else {
+      alert.error("Email không đúng định dạng!!!");
+    }
   };
   const registerDataChange = (e) => {
     if (e.target.name === "avatar") {
@@ -61,7 +71,7 @@ const LoginSignUp = ({ history, location }) => {
     }
   };
 
-  const redirect = location.search ? location.search.split("=")[1] : "/account";
+  const redirect = location.search ? location.search.split("=")[1] : "/";
 
   useEffect(() => {
     if (error) {
@@ -135,8 +145,10 @@ const LoginSignUp = ({ history, location }) => {
                           required
                           value={loginEmail}
                           onChange={(e) => setLoginEmail(e.target.value)}
+                          className="emailInput"
                         />
                       </div>
+
                       <div className="loginPassword">
                         <LockOpenIcon></LockOpenIcon>
                         <input
