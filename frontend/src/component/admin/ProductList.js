@@ -54,17 +54,24 @@ const ProductList = ({ history }) => {
     { field: "id", headerName: "ID", minWidth: 200, flex: 0.5 },
     { field: "name", headerName: "Tên sản phẩm", minWidth: 350, flex: 1 },
     {
+      field: "category",
+      headerName: "Danh mục",
+      type: "number",
+      minWidth: 190,
+      flex: 0.3,
+    },
+    {
       field: "stock",
       headerName: "Số lượng trong kho",
       type: "number",
-      minWidth: 190,
+      minWidth: 170,
       flex: 0.3,
     },
     {
       field: "price",
       headerName: "Giá",
       type: "number",
-      minWidth: 270,
+      minWidth: 200,
       flex: 0.5,
     },
     {
@@ -101,6 +108,7 @@ const ProductList = ({ history }) => {
         stock: item.Stock,
         price: item.price,
         name: item.name,
+        category: item.category,
       });
     });
   return (
