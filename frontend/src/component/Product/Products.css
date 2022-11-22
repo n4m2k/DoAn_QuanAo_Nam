@@ -151,7 +151,7 @@
 } */
 .paginationBox{
     display: flex;
-    justify-content: right;
+    justify-content: center;
     margin: 2vmax 1vmax 7vmax 0;
 }
 .pagination{
@@ -160,32 +160,35 @@
     padding: 0;
 }
 .page-item{
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255);
     list-style: none;
-    border: 1px solid rgba(0,0,0,0.178);
+    
     padding: 1vmax 1.5vmax;
-    transition: all 0.3s;
-    cursor: pointer;
+    transition: all 0.3s; */
+    cursor: pointer; 
+    display: inline-block;
+    margin: 30px 8px;
+    font-size: 15px;
+    font-weight: 600;
+    opacity: 0.4;
+    
+    
 }
-.page-item:first-child{
+/* .page-item:first-child{
     border-radius: 5px 0 0 5px;
 }
 .page-item:last-child{
     border-radius: 0px 5px 5px 0;
-}
+} */
 .page-link{
     text-decoration: none;
-    font:500 1.1vmax "Roboto";
+    font:550 1.5vmax "Oswald";
     color: rgb(80, 80, 80);
     transition: all 0.3s;
 }
-.page-item:hover{
-    border: 1px solid #0089ff;
-    
-}
+
 .pageItemActive{
-    background-color: #0089ff;
-    border: 1px solid #0089ff;
+    opacity: 1;
 }
 .pageLinkActive{
     color: white;

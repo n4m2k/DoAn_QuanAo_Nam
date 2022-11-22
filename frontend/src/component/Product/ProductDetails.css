@@ -154,7 +154,7 @@
     padding: 0 15px;
 }
 .details-product .details-info .details-name{
-    font-family: "Roboto",sans-serif;
+    font-family: "Oswald",sans-serif;
     color: #333;
     font-size: 30px;
     font-weight: 400;
@@ -358,7 +358,10 @@
     background: #ed1c24;
     cursor: pointer;
     transition: all 0.5s;
+
+
 }
+
 .form-product .btn-cart:hover{
     background-color:#0089ff;
 }

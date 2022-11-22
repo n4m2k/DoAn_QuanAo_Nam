@@ -27,8 +27,9 @@ const LoginSignUp = ({ history, location }) => {
     name: "",
     email: "",
     password: "",
+    repassword: "",
   });
-  const { name, email, password } = user;
+  const { name, email, password, repassword } = user;
 
   const [avatar, setAvatar] = useState();
   const [avatarPreview, setAvatarPreview] = useState("/Profile.png");
@@ -46,11 +47,15 @@ const LoginSignUp = ({ history, location }) => {
     e.preventDefault();
     const myForm = new FormData();
     if (ValidateEmail(email)) {
-      myForm.set("email", email);
-      myForm.set("name", name);
-      myForm.set("password", password);
-      myForm.set("avatar", avatar);
-      dispatch(register(myForm));
+      if (repassword === password) {
+        myForm.set("email", email);
+        myForm.set("name", name);
+        myForm.set("password", password);
+        myForm.set("avatar", avatar);
+        dispatch(register(myForm));
+      } else {
+        alert.error("Nhập lại mật khẩu không đúng!!!");
+      }
     } else {
       alert.error("Email không đúng định dạng!!!");
     }
@@ -159,6 +164,7 @@ const LoginSignUp = ({ history, location }) => {
                           onChange={(e) => setLoginPassword(e.target.value)}
                         />
                       </div>
+
                       <Link to="/password/forgot">Quên mật khẩu ?</Link>
                       <input
                         type="submit"
@@ -202,6 +208,17 @@ const LoginSignUp = ({ history, location }) => {
                           required
                           name="password"
                           value={password}
+                          onChange={registerDataChange}
+                        />
+                      </div>
+                      <div className="signUpPassword">
+                        <LockOpenIcon></LockOpenIcon>
+                        <input
+                          type="password"
+                          placeholder="Nhập lại mật khẩu"
+                          required
+                          name="repassword"
+                          value={repassword}
                           onChange={registerDataChange}
                         />
                       </div>

@@ -85,14 +85,34 @@
 }
 .left-nav-bar .nav-list li{
     padding: 0 16px;
+    margin-right: 6px;
     position: relative;
 }
 .left-nav-bar .nav-list li a{
     line-height: 70px;
     font-size: 14px;
-    font-family: 'Merriweather' !important;
+    font-family: 'Oswald', sans-serif;
     font-weight: 700;
     color: #333;
+}
+.left-nav-bar .nav-list li a:hover{
+    color: #000;
+    text-decoration: none;
+    outline: none;
+}
+.left-nav-bar .nav-list li a:hover::after{
+    background-color: initial;
+    background-image: url(https://file.hstatic.net/1000306633/file/269858510_400978881784237_2773069039765727977_n_1dec697e894b44028881c14c6507f7d8.png) !important;
+    background-repeat: no-repeat;
+    background-size: 4.2em 3em;
+    content: "";
+    display: block;
+    height: 3.25em;
+    z-index: 999999;
+    position: absolute;
+    left: 7px;
+    top: 12px;
+    width: 4.125em;
 }
 .left-nav-bar .nav-list li .ic-down{
     line-height: 70px;
@@ -267,7 +287,7 @@
     color: #333;
 }
 .right-nav-bar .size-1:hover{
-    color:#0089ff
+    animation: bigbabol 0.5s ease;
 }
 .header_cart .size{
     font-size: 29px;
@@ -276,6 +296,9 @@
     transition: all 0.5s;
     color: #333;
     margin-top: 21px;
+}
+.header_cart >a >.size:hover{
+    animation: bigbabol 0.5s ease;
 }
 .border_bt_cart{
     width: 90%;
@@ -305,6 +328,9 @@
 .lgin-size>svg{
     font-size: 27px;
 }
+.lgin-size>svg:hover{
+    animation: bigbabol 0.5s ease;
+}
 /* user options */
 .speedDial{
     position: fixed;
@@ -324,5 +350,19 @@
     100%{
         transform: translateY(0);
         opacity:1;
+    }
+}
+@keyframes bigbabol{
+    0% {
+        transform: scale(1);
+    }
+    33% {
+        transform: scale(1.2);
+    }
+    66% {
+        transform: scale(0.9);
+    }
+    100% {
+        transform: scale(1);
     }
 }

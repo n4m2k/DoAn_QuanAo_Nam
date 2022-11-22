@@ -1,5 +1,5 @@
 .category-1{
-    margin: 0 auto 75px auto;
+    margin: 0 auto 20px auto;
     width: 100%;
     max-width: 1200px;
     height: auto;
@@ -9,7 +9,8 @@
     font-weight: 350;
     color: rgb(143, 28, 28);
     text-align: center;
-    padding: 32px 0;
+    padding: 32px 0 0 0;
+    font-family: 'Oswald', sans-serif;
 }
 .product-list{
     display: flex;
@@ -211,7 +212,7 @@
     background-color: rgba(255, 255, 255, 0);
     color: white;
 }
-.banner::after{
+/* .banner::after{
     content: "";
     width: 100vw;
     height: 139vmin;
@@ -221,7 +222,7 @@
     left: 0;
     clip-path: polygon(100% 68%, 0 100%, 100% 100%);
     max-width: 100%;
-}
+} */
 .product-info>div{
     margin: 0.85vmax;
     display: flex;
@@ -238,6 +239,60 @@
 .productCart:hover{
     box-shadow: 0 0 5px rgba(15,15,15,0.26);
     transform: translateY(-1vmax);
+}
+.module-interior{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 8px;
+}
+.module-interior > .block-module {
+    position: relative;
+    flex-basis: 33%;
+}
+.ratiobox > img{
+    object-fit: cover;
+    max-width: 100%;
+}
+.wrapper-heading-home-instagram{
+    padding-bottom: 0px !important;
+    font-family: 'Oswald' !important;
+    width: 100%;
+    font-size: 5.85vw;
+    height: auto!important;
+    overflow: hidden;
+    text-transform: uppercase;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-fill-color: hsl(0deg 0% 100%);
+    padding: 20px 0;
+}
+.wrapper-animation2{
+    animation: animationText2 15s linear infinite;
+    white-space: nowrap;
+    margin-bottom: 50px;
+}
+.text-animation-2{
+    display: inline-flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.text-animation-2 >h2{
+    font-size: 75px;
+    line-height: 1.6;
+    margin: 0 0 0px;
+    font-weight: 500;
+    position: relative;
+    padding: 0 0 0px;
+    display: inline-block;
+}
+.text-animation-2 >h2::before{
+    content: "";
+    display: block;
+    bottom: -1px;
+    right: 0;
+    margin: 0 auto;
+    background: #000;
+    transition: all 0.3s linear;
 }
 @keyframes wave{
     0%, 100%{
@@ -267,3 +322,4 @@
         );
     }
 }
+@keyframes animationText2{0%{transform:translateZ(0)}to{transform:translate3d(-100vw,0,0)}}

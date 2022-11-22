@@ -1,8 +1,8 @@
 import React, { Fragment } from "react";
 import "./Header.css";
 import { Link } from "react-router-dom";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import ShoppingBagOutlinedIcon from "@mui/icons-material/ShoppingBagOutlined";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import { useSelector } from "react-redux";
 const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
@@ -82,7 +82,7 @@ const Header = () => {
 
             <div className="header_cart">
               <Link to="/cart">
-                <ShoppingBagOutlinedIcon className="size"></ShoppingBagOutlinedIcon>
+                <ShoppingBagIcon className="size"></ShoppingBagIcon>
                 <span className="header-cart-num">{cartItems.length}</span>
                 {/* khong cos sp: header__cart_list_no_cart */}
                 <div className="header__cart_list">
@@ -138,7 +138,7 @@ const Header = () => {
               </Link>
             </div>
             <Link to="/login" className="lgin-size">
-              <AccountCircleOutlinedIcon className="size" />
+              <AccountCircleIcon className="size" />
             </Link>
           </div>
         </div>

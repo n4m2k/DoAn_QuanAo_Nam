@@ -34,7 +34,7 @@ const UpdatePassword = ({ history }) => {
       dispatch(clearErrors());
     }
     if (isUpdated) {
-      alert.success("Thay đổi thông tin thành công");
+      alert.success("Thay đổi mật khẩu thành công");
       history.push("/account");
       dispatch({
         type: UPDATE_PASSWORD_RESET,

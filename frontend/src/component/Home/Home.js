@@ -13,6 +13,14 @@ const Home = () => {
   const alert = useAlert();
   const dispatch = useDispatch();
   const { loading, error, products } = useSelector((state) => state.products);
+  const categories = [
+    "TOP",
+    "BOTTOM",
+    "JACKET",
+    "SWEATER",
+    "CAP",
+    "ACCESSORIES",
+  ];
   useEffect(() => {
     if (error) {
       alert.error(error);
@@ -50,6 +58,53 @@ const Home = () => {
               </button>
             </a>
           </div>
+          <div className="module-interior">
+            <div className="block-module">
+              <Link to={`/products`}>
+                <div className="ratiobox">
+                  <img
+                    className="lazyautosizes lazyloaded"
+                    data-sizes="auto"
+                    data-src="//theme.hstatic.net/1000306633/1000891824/14/block_home_category1_new.png?v=326"
+                    data-lowsrc="//theme.hstatic.net/1000306633/1000891824/14/block_home_category1_new.png?v=326"
+                    src="//theme.hstatic.net/1000306633/1000891824/14/block_home_category1_new.png?v=326"
+                    alt="Tops"
+                    sizes="496px"
+                  />
+                </div>
+              </Link>
+            </div>
+            <div className="block-module">
+              <Link to={`/products`}>
+                <div className="ratiobox">
+                  <img
+                    className="lazyautosizes lazyloaded"
+                    data-sizes="auto"
+                    data-src="//theme.hstatic.net/1000306633/1000891824/14/block_home_category2_new.png?v=326"
+                    data-lowsrc="//theme.hstatic.net/1000306633/1000891824/14/block_home_category2_new.png?v=326"
+                    src="//theme.hstatic.net/1000306633/1000891824/14/block_home_category2_new.png?v=326"
+                    alt="Tops"
+                    sizes="496px"
+                  />
+                </div>
+              </Link>
+            </div>
+            <div className="block-module">
+              <Link to={`/products`}>
+                <div className="ratiobox">
+                  <img
+                    className="lazyautosizes lazyloaded"
+                    data-sizes="auto"
+                    data-src="//theme.hstatic.net/1000306633/1000891824/14/block_home_category3_new.png?v=326"
+                    data-lowsrc="//theme.hstatic.net/1000306633/1000891824/14/block_home_category3_new.png?v=326"
+                    src="//theme.hstatic.net/1000306633/1000891824/14/block_home_category3_new.png?v=326"
+                    alt="Tops"
+                    sizes="496px"
+                  />
+                </div>
+              </Link>
+            </div>
+          </div>
           <div className="category-1">
             <h1 className="hero-content">SẢN PHẨM MỚI</h1>
             <div className="product-list" id="container">
@@ -62,6 +117,20 @@ const Home = () => {
               <Link to="/products" className="button-custome">
                 Xem tất cả
               </Link>
+            </div>
+          </div>
+          <div className="site-animation wrapper-heading-home wrapper-heading-home-instagram">
+            <div className="wrapper-animation2">
+              <span className="text-animation-2">
+                <h2>
+                  <span>streetwear brand limited</span>
+                </h2>
+              </span>
+              <span className="text-animation-2">
+                <h2>
+                  <span>streetwear brand limited</span>
+                </h2>
+              </span>
             </div>
           </div>
         </Fragment>

@@ -79,8 +79,7 @@
     border: none;
     transition: all 0.5s;
 }
-.loginForm,
-.signUpForm{
+.loginForm{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -88,6 +87,17 @@
     padding: 2vmax;
     justify-content: space-evenly;
     height: 70%;
+    transition: all 0.5s;
+}
+.signUpForm{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* margin: auto; */
+    padding: 2vmax;
+    justify-content: space-evenly;
+    height: 95%;
     transition: all 0.5s;
 }
 .signUpForm{

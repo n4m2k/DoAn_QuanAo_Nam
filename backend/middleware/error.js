@@ -14,7 +14,7 @@ module.exports = (err, req, res, next) => {
 
   //Mongoose trùng Email
   if (err.code === 11000) {
-    const message = `Trùng ${Object.keys(err.keyValue)}`;
+    const message = `${Object.keys(err.keyValue)} đã tồn tại`;
     err = new ErrorHander(message, 400);
   }
 
