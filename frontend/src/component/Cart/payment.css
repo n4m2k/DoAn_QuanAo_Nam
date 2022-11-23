@@ -1,3 +1,4 @@
+
 .category .main-content-payment{
     display: flex;
     float: left;
@@ -8,7 +9,7 @@
     display: grid;
     place-items: center;
     background-color: rgb(255, 255, 255);
-    height: 65vh;
+    height: 80vh;
     margin: 2vmax;
 
 }
@@ -64,3 +65,4 @@
   .paymentFormBtn:hover {
     background-color: #0089ff;
   }
+

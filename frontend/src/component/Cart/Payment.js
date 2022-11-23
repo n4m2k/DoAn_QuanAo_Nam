@@ -5,6 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import MetaData from "../layout/MetaData";
 import { useAlert } from "react-alert";
 import { Typography } from "@mui/material";
+import { v4 as uuidv4 } from "uuid";
 import {
   CardNumberElement,
   CardCvcElement,
@@ -95,6 +96,7 @@ const Payment = ({ history }) => {
           };
           dispatch(createOrder(order));
           history.push("/success");
+          localStorage.removeItem("cartItems");
         } else {
           alert.error("Có một số vẫn đề khi thanh toán ");
         }
@@ -104,7 +106,15 @@ const Payment = ({ history }) => {
       alert.error(error.response.data.message);
     }
   };
-
+  const handlePayment = () => {
+    order.paymentInfo = {
+      id: uuidv4(),
+      status: "Chưa thanh toán",
+    };
+    dispatch(createOrder(order));
+    history.push("/success");
+    localStorage.removeItem("cartItems");
+  };
   useEffect(() => {
     if (error) {
       alert.error(error);
@@ -155,6 +165,13 @@ const Payment = ({ history }) => {
                   className="paymentFormBtn"
                 />
               </form>
+              <button
+                className="paymentFormBtn"
+                style={{ marginTop: "20px" }}
+                onClick={handlePayment}
+              >
+                Thanh toán khi nhận hàng
+              </button>
             </div>
           </div>
         </div>

@@ -97,6 +97,7 @@ exports.updateOrder = catchAsyncErrors(async (req, res, next) => {
   order.orderStatus = req.body.status;
   if (req.body.status === "Đã giao hàng") {
     order.deliveredAt = Date.now();
+    order.paymentInfo.status = "succeeded";
   }
 
   await order.save({ validateBeforeSave: false });

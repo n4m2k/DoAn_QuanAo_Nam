@@ -30,6 +30,7 @@ const UpdateProfile = ({ history }) => {
     myForm.set("avatar", avatar);
     dispatch(updateProfile(myForm));
   };
+
   const updateProfileDataChange = (e) => {
     const reader = new FileReader();
 

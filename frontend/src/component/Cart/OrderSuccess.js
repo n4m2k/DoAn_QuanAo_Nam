@@ -3,6 +3,7 @@ import CheckCircleIcon from "@mui/icons-material/CheckCircle";
 import "./OrderSuccess.css";
 import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import MetaData from "../layout/MetaData";
 
 const OrderSuccess = () => {
   return (
@@ -22,6 +23,7 @@ const OrderSuccess = () => {
           </ul>
         </div>
         <div className="main-content">
+          <MetaData title="Thanh toán thành công"></MetaData>
           <div className="orderSuccess">
             <CheckCircleIcon></CheckCircleIcon>
             <Typography>Bạn đã đặt hàng thành công!!</Typography>
