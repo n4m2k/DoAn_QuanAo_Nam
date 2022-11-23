@@ -41,6 +41,12 @@ const ProductCard = ({ product }) => {
                   currency: "VND",
                 }).format(product.price)}
               </span>
+              <span
+                className={product.Stock < 1 ? "redColor" : "greenColor"}
+                style={{ fontFamily: "Oswald" }}
+              >
+                {product.Stock < 1 ? "Hết hàng" : "Còn hàng"}
+              </span>
             </span>
           </div>
         </div>

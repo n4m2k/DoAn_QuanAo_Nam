@@ -165,11 +165,8 @@ const Payment = ({ history }) => {
                   className="paymentFormBtn"
                 />
               </form>
-              <button
-                className="paymentFormBtn"
-                style={{ marginTop: "20px" }}
-                onClick={handlePayment}
-              >
+              <p>(hoặc)</p>
+              <button className="paymentFormBtn" onClick={handlePayment}>
                 Thanh toán khi nhận hàng
               </button>
             </div>

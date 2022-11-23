@@ -114,7 +114,12 @@ const ProcessOrder = ({ history, match }) => {
                       </div>
                       <div>
                         <p>Tổng tiền: </p>
-                        <span>{order.totalPrice && order.totalPrice}</span>
+                        <span>
+                          {new Intl.NumberFormat("vi-VN", {
+                            style: "currency",
+                            currency: "VND",
+                          }).format(order.totalPrice && order.totalPrice)}
+                        </span>
                       </div>
                     </div>
                     <Typography>Trạng thái</Typography>
