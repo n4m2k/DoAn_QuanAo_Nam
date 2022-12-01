@@ -150,7 +150,6 @@
     margin-top: 250px;
     /* background-image: linear-gradient(to right, #635dc0, #3027ae); */
     background-image: url('https://file.hstatic.net/1000351433/file/bn_chinh_0a2b804aaede4ac3baac9fbdd82c7230.jpg');
-    
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vmin;
@@ -231,7 +230,8 @@
 }
 .product-info>div>.productInfoSpan{
     margin: 0.5vmax;
-    font:300 0.8vmax "Roboto"
+    font:300 0.8vmax "Roboto";
+    text-decoration: none;
 }
 .productCart{
     margin-top: 24px;

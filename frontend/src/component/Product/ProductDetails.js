@@ -43,6 +43,7 @@ const ProductDetails = ({ match }) => {
 
   const increaseQuantity = () => {
     if (product.Stock <= quantity) {
+      alert.error("Sản phẩm trong kho không đủ");
       return;
     }
     const qty = quantity + 1;
@@ -241,14 +242,14 @@ const ProductDetails = ({ match }) => {
                         className="btn-cart"
                         onClick={addToCartHandler}
                       >
-                        <span>Thêm vào giỏ hàng</span>
+                        Thêm vào giỏ hàng
                       </button>
                       <div>
                         <button
                           className="btn-review"
                           onClick={submitReviewToggle}
                         >
-                          <span>Đánh giá</span>
+                          Đánh giá
                         </button>
                       </div>
                     </div>

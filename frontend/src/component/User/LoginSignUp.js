@@ -188,6 +188,7 @@ const LoginSignUp = ({ history, location }) => {
                           value={name}
                           onChange={registerDataChange}
                         />
+                        <span class="input-border"></span>
                       </div>
                       <div className="signUpEmail">
                         <MailOutlineIcon></MailOutlineIcon>
@@ -199,6 +200,7 @@ const LoginSignUp = ({ history, location }) => {
                           value={email}
                           onChange={registerDataChange}
                         />
+                        <span class="input-border"></span>
                       </div>
                       <div className="signUpPassword">
                         <LockOpenIcon></LockOpenIcon>
@@ -210,6 +212,7 @@ const LoginSignUp = ({ history, location }) => {
                           value={password}
                           onChange={registerDataChange}
                         />
+                        <span class="input-border"></span>
                       </div>
                       <div className="signUpPassword">
                         <LockOpenIcon></LockOpenIcon>
@@ -221,6 +224,7 @@ const LoginSignUp = ({ history, location }) => {
                           value={repassword}
                           onChange={registerDataChange}
                         />
+                        <span class="input-border"></span>
                       </div>
                       <div id="registerImage">
                         <img src={avatarPreview} alt="Avatar Preview" />

@@ -244,10 +244,9 @@ div.image-1 .product-image-cart img{
     height: 45px;
     font-size: 14px;
     line-height: 45px;
-    color: #fff;
-    background-color: #ed1c24;
+    color: #333;
     text-transform: uppercase;
-    border: solid 1px #ed1c24;
+    border: none;
     width: 100%;
     margin: 0 auto 75px;
     font-weight: 700;
@@ -258,5 +257,5 @@ div.image-1 .product-image-cart img{
 }
 .shopping-cart-table .btn-checkout-cart:hover{
     background-color: #0089ff;
-    border: solid 1px #0089ff;
+    color: #fff;
 }

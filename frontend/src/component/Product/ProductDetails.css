@@ -250,6 +250,7 @@
     z-index: 1;
     top: 0;
     left: 0;
+    cursor: pointer;
 }
 .swatch label {
     float: left;
@@ -267,9 +268,10 @@
     border-radius: 0px;
     cursor: pointer;
 }
+
 .swatch input:checked+label {
-    background: #ed1c24;
-    border-color: #ed1c24;
+    background: #333;
+    border-color: #333;
     color: #fff;
     cursor: pointer;
 }
@@ -345,67 +347,84 @@
     outline: none;
 }
 .form-product .btn-cart{
-    height: 45px;
+    
     margin-left: 40px;
-    color: #fff;
-    line-height: 45px;
-    padding: 0px 35px;
-    border-radius: 0px;
-    text-transform: inherit;
-    display: flex;
-    text-align: center;
-    float: left;
-    border: solid 1px transparent;
-    background: #ed1c24;
     cursor: pointer;
-    transition: all 0.5s;
+    height: 45px;
+    font-size: 18px;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ display: inline-block;
+ text-align: center;
+ font-weight: 500;
+ padding: 0.6em 2em;
+ background-color: #333;
+ border: 1px solid #333;
+ font-family: "Roboto";
+ position: relative;
+ color: #fff;
+ text-decoration: none;
+ transition: 0.3s ease all;
+ z-index: 1;
 
 
 }
-
-.form-product .btn-cart:hover{
-    background-color:#0089ff;
+.form-product .btn-cart::before,
+.form-product .btn-review::before{
+    transition: 0.5s all ease;
+ position: absolute;
+ top: 0;
+ left: 50%;
+ right: 50%;
+ bottom: 0;
+ opacity: 0;
+ content: '';
+ 
+ background-color: #fff;
+ z-index: -1;
 }
-.form-product .btn-cart span{
-    line-height: 45px;
-    text-transform: uppercase;
-    width: 100%;
-    float: left;
-    display: block;
-    font-family: "Roboto",sans-serif;
-    font-weight: 700;
-    font-size: 12px;
+.form-product .btn-cart:hover,
+.form-product .btn-cart:focus,
+.form-product .btn-review:hover,
+.form-product .btn-review:focus {
+    color: #333;
+}
+.form-product .btn-cart:hover:before,
+.form-product .btn-cart:focus:before,
+.form-product .btn-review:focus:before,
+.form-product .btn-review:hover:before{
+    transition: 0.5s all ease;
+ left: 0;
+ right: 0;
+ opacity: 1;
+}
+.form-product .btn-cart:active,
+.form-product .btn-review:active
+{
+    transform: scale(0.9);
 }
 .form-product .btn-review{
-    margin-top: 80px;
-    margin-left: -310px;
-    color: #fff;
-    line-height: 45px;
-    padding: 0px 35px;
-    border-radius: 0px;
-    text-transform: inherit;
-    display: flex;
-    text-align: center;
-    float: left;
-    border: solid 1px transparent;
-    background: #ed1c24;
+    margin-top: 20px;
+    font-family: "Roboto";
     cursor: pointer;
-    transition: all 0.5s;
     height: 45px;
+    font-size: 18px;
+ letter-spacing: 2px;
+ text-transform: uppercase;
+ display: inline-block;
+ text-align: center;
+ font-weight: 500;
+ padding: 0.55em 2em;
+ border: 1px solid #333;
+ background-color: #333;
+ position: relative;
+ color: #fff;
+ text-decoration: none;
+ transition: 0.3s ease all;
+ z-index: 1;
     
-}.form-product .btn-review span{
-    line-height: 45px;
-    text-transform: uppercase;
-    width: 100%;
-    float: left;
-    display: block;
-    font-family: "Roboto",sans-serif;
-    font-weight: 700;
-    font-size: 12px;
 }
-.form-product .btn-review:hover{
-    background-color:#0089ff;
-}
+
 /* mô tả */
 .ds-product{
     margin-top: 75px;
